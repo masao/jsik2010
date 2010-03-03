@@ -1,0 +1,37 @@
+body {
+  background-color: #dfb;
+/*  color: #0b900b;*/
+}
+h1 {
+  color: #444;
+  padding: 20px;
+  text-align: center;
+  border: solid #5a5 2px;
+  border-left: solid #5a5 30px;
+  border-right: solid #5a5 30px;
+}
+h2 {
+  border-left: solid #5a5 20px;
+  border-bottom: solid #5a5 2px;
+  color: #444;
+  padding: 5px;
+  padding-left: 10px;
+  margin-left: 20px;
+}
+p {
+  text-indent: 1em;
+  margin: 1px 20px;
+}
+.last-update {
+  text-align: right;
+  font-size: smaller;
+}
+address {
+  font-style: normal;
+}
+.footer {
+  text-align: right;
+}
+.id {
+  font-size: smaller;
+}
