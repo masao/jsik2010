@@ -1,9 +1,5 @@
-body {
-  background-color: #dfb;
-/*  color: #0b900b;*/
-}
 h1 {
-  color: #444;
+  color: #333;
   padding: 20px;
   text-align: center;
   border: solid #5a5 2px;
@@ -11,9 +7,9 @@ h1 {
   border-right: solid #5a5 30px;
 }
 h2 {
+  color: #333;
   border-left: solid #5a5 20px;
   border-bottom: solid #5a5 2px;
-  color: #444;
   padding: 5px;
   padding-left: 10px;
   margin-left: 20px;
