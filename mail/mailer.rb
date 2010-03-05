@@ -21,7 +21,7 @@ ARGF.each do |line|
       puts "skip no email: #{ data[15] }"
       next
    end
-   data = data.map{|e| p e;e.to_s.sub( /\A"(.*)"\Z/, '\1' ) }
+   data = data.map{|e| e.to_s.sub( /\A"(.*)"\Z/, '\1' ).gsub( /\"\"/, '"' ) }
    result = ERB::new( message ).result( binding )
    puts data[15]
    open("|#{NKF_command} -j -m0 | #{SENDMAIL_command} -oi -t -f #{FROM_address}", "w") do |io|
