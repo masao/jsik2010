@@ -1,0 +1,48 @@
+From: jsik2010@ml.nims.go.jp
+To: <%= data[15] %>
+Cc: TAKAKU.Masao@nims.go.jp
+Subject: =?ISO-2022-JP?B?GyRCSC9JPT89OX46TkJyIUo+cEpzQ048MTNYMnEbKEI=?=
+	=?ISO-2022-JP?B?GyRCRy88IUJnMnEhSxsoQg==?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-2022-JP
+
+<%= data[13] %> 様
+
+                                  　  2010年度年次大会実行委員会
+
+
+　情報知識学会第18回(2010年度)年次大会にエントリーしていただき、有難う
+ございました。
+
+　　発表論題 「<%= data[1] %>」
+　　申込受付日 <%= data[0] %>
+
+　貴発表は受理，採択されましたのでご連絡申し上げます。
+
+（１）原稿の提出について
+　発表原稿を4月2日（金）の締め切りまでにご提出下さい。締め切りを遅れた
+場合には掲載できない可能性があります。
+　原稿は，会誌の最新号や当会サイトに掲載されている執筆要領に従ってご作
+成下さい。執筆要領に従っていない原稿は受理されませんのでご注意下さい。
+執筆要領は以下をご参照ください。
+http://wwwsoc.nii.ac.jp/jsik/gakkaishi/tokokitei/shippitsu-20090724.doc
+
+　提出は以下のURLにアクセスし、必要な情報を入力の上、執筆要領に準じて
+作成した文書をPDF化してアップロード下さい。なお、入力フォームは現在準
+備中ですので、準備が出来次第ご連絡いたします。
+http://etk.sakura.ne.jp/jsik2010/form/
+
+（２）登壇者の学会入会について
+　また、登壇者は当日までに学会員になる必要があります。入会は当日でも可
+能ですが、当日までに入会をする場合の方法については、当会のサイトをご参
+照頂ければ幸いです。
+  http://wwwsoc.nii.ac.jp/jsik/
+
+（３）別刷りについて
+　別刷りを注文する場合は、
+http://wwwsoc.nii.ac.jp/jsik/gakkaishi/tokokitei/betsuzuri.txt
+にあります「別刷り注文書」の内容をメールの本文にペーストし、必要情報を
+入力し、メールにて情報知識学会事務局（jsik@nifty.com）宛にメールでご連
+絡下さい。なお、別刷りの注文は大会終了後でも構いません。
+
+以上、よろしくお願い申し上げます。
