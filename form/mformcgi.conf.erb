@@ -1,0 +1,48 @@
+title: "発表原稿投稿: 2009年度 情報知識学会年次大会"
+admin_name: 2009年度情報知識学会年次大会 実行委員会
+admin_mail: mailto:jsik2009@valdes.titech.ac.jp
+css: '
+  @import url(../../style.css);
+  #form dt { text-align: right; }
+   #form dd { margin-left: 9em }
+   p.top { margin: 0 4em 0; color: #f55; }
+  '
+data_dir: ../data/
+message:
+  top: "
+       [<%= program_id %>]<br>
+       <%= authors %> :<br>
+       「<%= title %>」
+       </p><p>
+       上記発表原稿の送信をお願いします。
+       "
+  save_completed: ご投稿ありがとうございました。
+  RequiredFormMissingError: "下記の値を入力してください。"
+forms:
+  - type: hidden
+    label: ID
+    value: <%= program_id %>
+    identifier?: true
+  - type: file
+    label: 原稿ファイル
+    require?: true
+    note: ファイルはPDF形式でアップロードしてください。
+    filename: "#{@saved_data['form0']}-#{@time}#{extname}"
+    filename_suffix: pdf$
+    message:
+      FilenameSuffixError: "ファイルの種類が違います。PDFファイルのみアップロードできます"
+  - type: text
+    label: 連絡先の氏名
+    require?: true
+    size: 40
+  - type: text
+    label: メールアドレス
+    size: 40
+    require?: true
+  - type: textarea
+    label: 連絡事項
+    note: "論題・著者名・著者所属等の変更などがありましたら、その旨お知らせいただければ幸いです。<br>
+    また、発表の際に必要な機材など、連絡事項がありましたら、あわせてご連絡ください。"    
+    rows: 6
+    cols: 80
+submit: ファイル送信

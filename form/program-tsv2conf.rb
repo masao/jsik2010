@@ -1,18 +1,26 @@
 #!/usr/bin/env ruby
+# -*- coding: euc-jp -*-
 # $Id$
 
 require "erb"
 require "fileutils"
+require "kconv"
 
 $KCODE = "euc"
 
-erb = open("form/mformcgi.conf.erb"){|io| io.read }
+# フォームを展開するフォルダ:
+BASEDIR = "."
+
+erb = open("mformcgi.conf.erb"){|io| io.read }
+
 ARGF.each do |line|
-   pid, title, author = line.chomp.split(/\t/)
-   title.strip!
-   author = author.gsub(/^\"(.*)\"$/, '\1').strip
-   p [ pid, title, author ]
-   dirname = File.join( "form/submit", pid.gsub(/-/, "") )
+   session_id, idx, title, author_short, authors = line.toeuc.chomp.split(/\t/)
+   program_id = [ session_id, idx ].join( "-" )
+   title = title.gsub(/^\"(.*)\"$/, '\1').gsub( /\"\"/, '"' ).strip
+   author_short = author_short.gsub(/^\"(.*)\"$/, '\1').strip
+   authors = authors.gsub(/^\"(.*)\"$/, '\1').strip
+   p [ program_id, title, authors ]
+   dirname = File.join( BASEDIR, program_id.gsub(/-/, "") )
    FileUtils.rm_rf( dirname + ".bak" )
    FileUtils.mv( dirname, dirname + ".bak", :force => true )
    STDERR.puts dirname
@@ -20,7 +28,7 @@ ARGF.each do |line|
    open( File.join( dirname, "mformcgi.conf" ), "w" ) do |io|
       io.puts ERB.new( erb ).result( binding )
    end
-   open( "form/submit/mformcgi.conf", "w" ) do |io|
+   open( "mformcgi.conf", "w" ) do |io|
       io.puts ERB.new( erb ).result( binding ).gsub( /\.\.\/data\//, "./data/" )
    end
 end
