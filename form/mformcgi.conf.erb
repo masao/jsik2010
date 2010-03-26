@@ -2,10 +2,11 @@ title: "発表原稿投稿: 2010年度 情報知識学会年次大会"
 admin_name: 2010年度情報知識学会年次大会 実行委員会
 admin_mail: mailto:jsik2010@ml.nims.go.jp
 css: '
-  @import url(../../style.css);
+  @import url(../../default.css);
   #form dt { text-align: right; }
-   #form dd { margin-left: 9em }
-   p.top { margin: 0 4em 0; color: #f55; }
+  #form dd { margin-left: 9em; }
+  p.top { margin: 0 4em 0; color: #f55; }
+  .note { margin-top: 0; padding-bottom: 5px; }
   '
 data_dir: ../data/
 message:
@@ -15,8 +16,10 @@ message:
        「<%= title %>」
        </p><p>
        上記発表原稿の送信をお願いします。
+       </p><p>
+       なお、ここで入力された論題名、著者名等は、広報プログラムや目次に利用しますので、間違いのないようにお願いします。
        "
-  save_completed: ご投稿ありがとうございました。
+  save_completed: 原稿ファイルを受信しました。ご投稿ありがとうございました。大会当日をお待ちしております。
   RequiredFormMissingError: "下記の値を入力してください。"
 forms:
   - type: hidden
@@ -32,6 +35,42 @@ forms:
     message:
       FilenameSuffixError: "ファイルの種類が違います。PDFファイルのみアップロードできます"
   - type: text
+    label: 論文題目（日本語）
+    require?: true
+    size: 80
+  - type: text
+    label: 論文題目（英語）
+    require?: true
+    size: 80
+  - type: text
+    label: 著者名（日本語）
+    require?: true
+    note: "複数著者は間を「, 」（カンマ）で区切って入力してください。例: 「高久雅生, 梶川裕矢」"
+    size: 80
+  - type: text
+    label: 著者名（英語）
+    require?: true
+    note: "複数著者は間を「, 」（カンマ）で区切って入力してください。例: 「Masao TAKAKU, Yuya KAJIKAWA」"
+    size: 80
+  - type: text
+    label: 総ページ数
+    require?: true
+    size: 5
+    validate: '^[\d０-９]+$'
+    note: 半角数字で入力してください。なお、6ページを超えた場合、2ページ単位ごとに2,000円の超過料が必要となります。当日に受付でお支払いください。
+    message:
+      ValidateError: "英数字のみを入力してください"
+  - type: select
+    label: 登壇者の会員種別
+    require?: true
+    choice:
+      - ""
+      - 正会員
+      - 学生会員
+      - 非会員（大会前に入会手続きを予定）
+      - 非会員（大会当日に入会を予定）
+    note: 登壇者が非会員の場合、会員となることが必要です。大会当日に入会申し込みすることも可能です。
+  - type: text
     label: 連絡先の氏名
     require?: true
     size: 40
@@ -39,9 +78,10 @@ forms:
     label: メールアドレス
     size: 40
     require?: true
+    note: 複数名に連絡が必要な場合は、アドレスを半角カンマで区切って入力ください。
   - type: textarea
     label: 連絡事項
-    note: "論題・著者名・著者所属等の変更などがありましたら、その旨お知らせいただければ幸いです。<br>
+    note: "上記入力分以外で著者所属等に変更がありましたら、その旨お知らせいただければ幸いです。<br>
     また、発表の際に必要な機材など、連絡事項がありましたら、あわせてご連絡ください。"    
     rows: 6
     cols: 80
