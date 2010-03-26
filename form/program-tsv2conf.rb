@@ -29,6 +29,6 @@ ARGF.each do |line|
       io.puts ERB.new( erb ).result( binding )
    end
    open( "mformcgi.conf", "w" ) do |io|
-      io.puts ERB.new( erb ).result( binding ).gsub( /\.\.\/data\//, "./data/" )
+      io.puts ERB.new( erb ).result( binding ).gsub( /\.\.\/(\w)/, './\1' )
    end
 end
