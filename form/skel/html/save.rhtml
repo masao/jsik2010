@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<title><%=h @conf[:title] %></title>
+<link rel="stylesheet" href="./css/default.css" type="text/css">
+<% if @conf["css"] %>
+<style type="text/css"><%=h @conf["css"] %></style>
+<% end %>
+</head>
+<body>
+<h1><%=h @conf[:title] %></h1>
+<% if @error %>
+<p class="error_message">Error: <%=h error_message %></p>
+<% else %>
+<p>
+<% dummy, y, m, d, hh, mm, ss = /^(\d\d\d\d)(\d\d)(\d\d)(\d\d)(\d\d)(\d\d)$/.match( @time ).to_a %>
+<!-- Save completed. -->
+<span class="time"><%=h y %>-<%=h m %>-<%=h d %> <%=h hh %>:<%=h mm %></span>
+</p>
+<% if @conf["message"]["save_completed"] and not @conf["message"]["save_completed"].empty? %>
+<p><%=h @conf["message"]["save_completed"]%></p>
+<% end %>
+<% end %>
+<dl id="form">
+<% @forms.each do |form| %>
+  <dt><%=h form.label %>
+  <dd><%= @saved_data[ form.id ].to_s.split( /\\n/ ).map{|e| h e }.join( "<br/>" ) %>
+<% end %>
+</dl>
+<hr>
+<address>
+<%=h @conf[:admin_name] %>
+<% if @conf[:admin_mail] %>
+  <a href="<%=h @conf[:admin_mail] %>"><%=h @conf[:admin_mail] %></a>
+<% end %>
+</address>
+</body>
+</html>
