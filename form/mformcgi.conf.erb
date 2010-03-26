@@ -13,7 +13,7 @@ message:
   top: "
        [<%= program_id %>]<br>
        <%= authors %> :<br>
-       「<%= title %>」
+       「<%= title.gsub( /\"/, '\"' ) %>」
        </p><p>
        上記発表原稿の送信をお願いします。
        </p><p>
@@ -38,6 +38,7 @@ forms:
     label: 論文題目（日本語）
     require?: true
     size: 80
+    default: "<%= title.gsub( /\"/, '\"' ) %>"
   - type: text
     label: 論文題目（英語）
     require?: true
@@ -47,6 +48,7 @@ forms:
     require?: true
     note: "複数著者は間を「, 」（カンマ）で区切って入力してください。例: 「高久雅生, 梶川裕矢」"
     size: 80
+    default: "<%= authors.gsub( /\(.*?\)/, '' ).sub( /○/, "" ) %>"
   - type: text
     label: 著者名（英語）
     require?: true
