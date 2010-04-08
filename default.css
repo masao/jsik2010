@@ -72,6 +72,12 @@ div.authors {
   font-size: smaller;
   text-align: right;
 }
+div.author2 {
+  margin-left: 4em;
+}
+li .itemhead {
+  font-size: smaller;
+}
 .program {
   padding: 2px;
 }
@@ -87,4 +93,4 @@ div.authors {
 }
 .program .colA { width: 46% }
 .program .colB { width: 46% }
-program td.blank { border: none; }
+.program td.blank { border: none; }

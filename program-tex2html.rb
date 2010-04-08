@@ -63,7 +63,16 @@ rows.each do |tr|
       td.sub!( /\\begin\{tabular\}.*$/, '' )
       td.sub!( /\\begin\{authors\}/, '<div class="authors">' )
       td.sub!(/\\end\{authors\}/, '</div>' )
-      td.sub!( /\\multicolumn\{([0-9]+)\}\{([\|\w]+)\}\{(.*?)\}/ ) do |match|
+
+      td.gsub!( /\\begin\{author2\}/, '<div class="author2">' )
+      td.gsub!(/\\end\{author2\}/, '</div>' )
+      td.gsub!( /\\begin\{center\}/, '<center>' )
+      td.gsub!(/\\end\{center\}/, '</center>' )
+      td.gsub!( /\\begin\{itemize\}/, '<ul>' )
+      td.gsub!(/\\end\{itemize\}/, '</ul>' )
+      td.gsub!( /\\item\s*(.*)$/, '<li><span class="itemhead">\1</span><br>' )
+
+      td.sub!( /\\multicolumn\{([0-9]+)\}\{([\|\w\{\}\\]+)\}\{(.*?)\}/ ) do |match|
          attr[:colspan] = $1 if $1.to_i > 1
          style << "center" if $2.include?( "c" )
          $3
