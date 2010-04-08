@@ -40,7 +40,7 @@ lines[ lines.find_index{|e| /^\\subsection/ =~ e } .. -1 ].each do |line|
    end
 end
 
-puts "<table id=\"program\">"
+puts "<table class=\"program\">"
 rows = table.split(/\\\\/)
 rows.delete( "\\hline\n" )
 rows.each do |tr|
