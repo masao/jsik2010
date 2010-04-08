@@ -14,6 +14,14 @@ h2 {
   padding-left: 10px;
   margin-left: 20px;
 }
+h3 {
+  color: #333;
+  border-left: solid #5a5 10px;
+/*  border-bottom: solid #5a5 1px;*/
+  padding: 5px;
+  padding-left: 10px;
+  margin-left: 25px;
+}
 p {
   text-indent: 1em;
   margin: 1px 20px;
@@ -31,3 +39,52 @@ address {
 .id {
   font-size: smaller;
 }
+
+
+h1, h2, h3 {
+  clear: both;
+}
+
+dl dt {
+  display: block;
+  float:   left;
+  clear:   both;
+  width: 5.5em;
+  text-align: right;
+}
+dl dd {
+  margin-left:  6em;
+  border-left:  1px solid gray;
+  text-align:   left;
+  padding-left: 10px;
+}
+dl.credit {
+  font-size: smaller;
+  float: right;
+  margin: 0 0 0 1em;
+  padding: .2em;
+  border: dashed #5a5 1px;
+}
+dl.summary {
+  margin-left: 2em;
+}
+div.authors {
+  font-size: smaller;
+  text-align: right;
+}
+.program {
+  padding: 2px;
+}
+.program td {
+  padding: 3px;
+  border: solid 1px #888;
+  vertical-align: top;
+}
+.program th {
+  font-size: 105%;
+  padding: 3px;
+  border: dotted 2px #888;
+}
+.program .colA { width: 46% }
+.program .colB { width: 46% }
+program td.blank { border: none; }
