@@ -72,7 +72,8 @@ rows.each do |tr|
       td.gsub!(/\\end\{itemize\}/, '</ul>' )
       td.gsub!( /\\item\s*(.*)$/, '<li><span class="itemhead">\1</span><br>' )
 
-      td.sub!( /\\multicolumn\{([0-9]+)\}\{([\|\w\{\}\\]+)\}\{(.*?)\}/ ) do |match|
+      #p td
+      td.sub!( /\\multicolumn\{([0-9]+)\}\{([\|\w\{\}\\]+)\}\{(.*?)\}/m ) do |match|
          attr[:colspan] = $1 if $1.to_i > 1
          style << "center" if $2.include?( "c" )
          $3
