@@ -49,11 +49,11 @@ dl dt {
   display: block;
   float:   left;
   clear:   both;
-  width: 5.5em;
+  width: 6.5em;
   text-align: right;
 }
 dl dd {
-  margin-left:  6em;
+  margin-left:  7em;
   border-left:  1px solid gray;
   text-align:   left;
   padding-left: 10px;
