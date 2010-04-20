@@ -1,0 +1,415 @@
+% $Id$
+\documentclass[twoside,11pt]{jsarticle}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{html}
+\usepackage{fancyvrb}
+\usepackage{longtable}
+
+\newcommand{\htmlth}{}
+\newcommand{\htmlclass}[1]{}
+\setlength{\headheight}{0truemm}
+\setlength{\headsep}{0truemm}
+\setlength{\topskip}{0pt}
+\setlength{\topmargin}{0pt}
+\setlength{\topmargin}{-1truein}
+\addtolength{\topmargin}{20truemm}
+\setlength{\footskip}{0pt}
+\setlength{\footskip}{-1truein}
+\addtolength{\footskip}{22truemm}
+\setlength{\textheight}{257truemm}
+\setlength{\oddsidemargin}{-1truein}
+\setlength{\evensidemargin}{-1truein}
+\addtolength{\oddsidemargin}{20truemm}
+\addtolength{\evensidemargin}{20truemm}
+\setlength{\textwidth}{172truemm}
+\setlength{\columnsep}{2em}
+
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\fancyhf{}
+%\lhead{\bf\large お知らせ}
+%%\chead{}
+%%\rhead{}
+%\renewcommand{\headrulewidth}{0pt}
+
+\pagestyle{empty}
+
+\renewcommand{\baselinestretch}{.75}
+\selectfont
+
+\newenvironment{authors}{\small\vspace*{.5ex}\begin{flushright}%
+\vspace*{-.7\baselineskip}%
+\setlength{\partopsep}{0pt}%
+\setlength{\topsep}{0pt}%
+\setlength{\itemsep}{0pt}%
+\setlength{\parsep}{0pt}%
+\setlength{\parskip}{0pt}%
+%\hfil%
+}%
+{\vspace*{-\baselineskip}\end{flushright}}
+
+\newenvironment{author2}{\small\hfill}{}
+
+\newlength{\sessionwidth}
+\setlength{\sessionwidth}{69truemm}
+
+\newcommand{\authorsep}{\vspace*{-.92\baselineskip}}
+
+\begin{document}
+%\vspace*{-.7\baselineskip}
+%\noindent{\bf\large お知らせ}
+%\vspace*{-.7\baselineskip}
+%\vspace*{12pt}
+
+\begin{center}
+{\sf\large 情報知識学会 第18回（2010年度）年次大会（シンポジウム、研究報告会および総会）}
+\end{center}
+\begin{flushright}%\small
+ \begin{tabular}{rl}
+  実行委員長& 梶川裕矢（東京大学）\\
+  実行委員&江草由佳（国立教育政策研究所）\\
+  実行委員&高久雅生（物質・材料研究機構）\\
+  実行委員&森純一郎（東京大学）
+ \end{tabular}
+\end{flushright}
+%\vspace*{-.8\baselineskip}
+
+第18回年次大会は、東京大学本郷キャンパスにおいて開催します。
+本年は、科学技術コモンズの現状と課題を共有し議論するシンポジウムも開催します。
+%各分野からの第一人者を招いての講演とパネルディスカッションを通じて，今後の展開について議論を深めたいと存じます。
+%また，昨年に引き続き，懇談会を「情報交流会」として，より気軽に参加しやすい懇親の場を設けますので，奮ってご参加下さい．
+なお、事前の参加申込は不要です。
+直接会場にお越しください。
+皆様のご参加をお待ちしております。
+
+\begin{enumerate}
+ \item 日時：2010年 5月15日（土） 、5月16日（日）
+ \item 会場：東京大学 本郷キャンパス工学部２号館
+       （東京都文京区本郷7-3-1）\\
+       \url{http://www.u-tokyo.ac.jp/campusmap/cam01_04_03_j.html}
+ \item 参加費：無料
+ \item 資料代：会員無料、一般非会員3,000円、学生非会員1,000円
+ \item 懇談会参加費：一般 4,000円、学生 1,000円
+% \item お問い合わせ先：年次大会実行委員会
+%       \url{jsik2010@ml.nims.go.jp}
+\end{enumerate}
+\vspace*{-\baselineskip}
+
+%\subsection*{プログラム（予定）}
+\subsection*{プログラム  （1日目）}
+%※プログラム暫定版
+
+\noindent
+\begin{tabular}{|c|p{\sessionwidth}||p{\sessionwidth}|}
+ \hline
+\htmlth 時間&\htmlth\htmlclass{colA}\multicolumn{1}{|c||}{A会場（1階 212号室）}&\htmlth\htmlclass{colB}\multicolumn{1}{|c|}{B会場（1階 211号室）}\\\hline\hline
+10:00 & \multicolumn{2}{|c|}{（受付開始）}\\\hline
+&\multicolumn{1}{|c||}{\footnotesize\sf A-1「評価と選択」（座長: 阪口哲男）}&
+ \multicolumn{1}{|c|}{\footnotesize\sf  B-1「情報知識と人間・社会」（座長: 細野公男）}\\\hline
+10:30〜11:00&
+オンライン書評と従来の書評との違いの分析
+
+\authorsep
+\begin{authors}
+○原田隆史（慶應義塾大学文学部）, 
+
+ 吉村紗和子（イー・モバイル株式会社）
+\end{authors}
+ &
+環境・社会・経済のトリレンマ緩解論
+
+\begin{authors}
+○沢恒雄（遊工学技術士機構）
+\end{authors}
+ \\\hline
+11:00〜11:30&
+
+Q\&Aサイトにおけるベストアンサー推定の分析とその機械学習への応用 
+
+\begin{authors}
+○石川大介（国立情報学研究所）, 栗山和子（白百合女子大学）, 酒井哲也（Microsoft Research Asia）, 関洋平（豊橋技術科学大学）, 神門典子（国立情報学研究所）
+\end{authors}
+&
+社会変革の一般的構造
+
+\begin{authors}
+○安平哲太郎（産業技術総合研究所）
+\end{authors}
+ \\\hline
+11:30〜12:00
+&
+Internet Archive の Wayback Machine を使ったホームページの分析
+
+\begin{authors}
+○時実象一, 杉浦友哉（愛知大学）
+\end{authors}
+&
+人間の積極的に生きる能力を高めるために
+
+\begin{authors}
+○福永征夫（アブダクション研究会）
+\end{authors}
+\\\hline\hline
+12:00〜13:00& \multicolumn{2}{|c|}{お昼休み}\\\hline\hline
+&\multicolumn{2}{|c|}{C会場（1階 213号室）}
+\\\hline
+13:00〜17:40
+&
+\multicolumn{2}{|p{2\sessionwidth}|}{
+\vspace*{-1ex}
+\begin{center}
+\bf 記念シンポジウム「科学技術コモンズと情報知識学の挑戦」
+\end{center}
+\begin{itemize}
+ \item 開会挨拶
+       「科学技術コモンズの構築に向けて」
+       \begin{author2}
+       岩田修一教授（東京大学）
+       \end{author2}
+ \item 基調講演
+
+       「科学技術コモンズと情報知識学への期待」
+       \begin{author2}
+       長尾真館長（国立国会図書館）
+       \end{author2}
+
+       「科学技術コモンズとオープンアクセス」
+       \begin{author2}
+       時実象一教授（愛知大学）
+       \end{author2}
+ \item 招待講演
+
+       「ライフサイエンスにおける統合データベースの構築と課題」
+
+       \begin{author2}
+       高木利久センター長（ライフサイエンス統合データベースセンター）
+       \end{author2}
+
+       「材料科学におけるデータベース共通プラットフォームの開発と課題」
+
+       \begin{author2}
+       芦野俊宏教授（東洋大学）
+       \end{author2}
+
+       「コモンズ構築と利用のための知識表現」
+       \begin{author2}
+       Steven Kraines准教授（東京大学）
+       \end{author2}
+
+ \item 特別講演
+
+       「コモンズに関わる法的課題」 
+
+       \begin{author2}
+       野口祐子氏（クリエイティブ・コモンズ・ジャパン常務理事）
+       \end{author2}
+ \item パネル討論
+       \begin{author2}
+       モデレーター：橋本正洋氏（特許庁）
+       \end{author2}
+ \item 閉会挨拶
+       \begin{author2}
+       根岸正光会長
+       \end{author2}
+\end{itemize}
+%\multicolumn{2}{|p{2\sessionwidth}|}{
+%{\centering\bf 記念シンポジウム「科学技術コモンズとイノベーション」}
+%
+%（シンポジウム詳細は追って更新します）
+}
+\\\hline\hline
+18:00〜20:00&\multicolumn{2}{|c|}{\sf 懇談会（会場: 2F 展示室）}\\\hline
+\end{tabular}
+
+\subsection*{プログラム  （2日目）}
+\noindent
+\begin{tabular}{|c|p{\sessionwidth}||p{\sessionwidth}|}
+ \hline
+\htmlth 時間&\htmlth\htmlclass{colA}\multicolumn{1}{|c||}{A会場（1階 212号室）}&\htmlth\htmlclass{colB}\multicolumn{1}{|c|}{B会場（1階 211号室）}\\\hline\hline
+9:30 & \multicolumn{2}{|c|}{（受付開始）}\\\hline
+&\multicolumn{1}{|c||}{\footnotesize\sf A-2「人文情報知識学」（座長: 堀幸雄）}&
+ \multicolumn{1}{|c|}{\footnotesize\sf  B-2「計量書誌」（座長: 伊神正貫）}\\\hline
+10:00〜10:30&
+文芸批評の計量解析による批評行為の背景的特徴の抽出
+
+\begin{authors}
+ ○村井源, 徃住彰文（東京工業大学大学院
+
+ 社会理工学研究科）
+\end{authors}
+&
+業績評価に向けた正規化インパクト・ファクター，“IDV: Impact Deviation Value”（インパクト・ファクター偏差値）の提案
+
+\begin{authors}
+○根岸正光（国立情報学研究所）
+\end{authors}
+\\\hline
+10:30〜11:00&
+星新一ショートショート文学の物語パターン抽出
+
+\begin{authors}
+ ○佐藤知恵, 村井源, 徃住彰文（東京工業大学
+
+ 大学院社会理工学研究科）
+\end{authors}
+&
+学術の国際化による日本の産学共著関係の変化
+
+\begin{authors}
+○孫媛, 根岸正光（国立情報学研究所）
+ \end{authors}
+\\\hline
+11:00〜11:30&
+音楽評論論文にみる作曲家の感性的特徴 
+
+\begin{authors}
+○河瀬彰宏, 村井源, 徃住彰文（東京工業大学
+
+大学院社会理工学研究科）
+\end{authors}
+&
+キーワード分析による環境関連研究の動向調査
+
+\begin{authors}
+○西澤正己, 孫媛（国立情報学研究所）
+\end{authors}
+\\\hline
+11:30〜12:00&
+計量分析による村上春樹文学の語彙構成と歴史的変遷 
+
+\begin{authors}
+○工藤彰, 村井源, 徃住彰文（東京工業大学
+
+大学院社会理工学研究科）
+\end{authors}
+&
+\\\hline
+%begin:HTML:ignore
+%end:HTML:ignore
+12:00〜12:40
+&
+\multicolumn{1}{|c||}{\bf 総会}
+&
+\\\hline\hline
+12:40〜13:40&\multicolumn{2}{|c|}{お昼休み}
+\\\hline\hline
+%\htmlth\htmlclass{colA}\multicolumn{1}{|c||}{A会場（1階 212号室）}&\htmlth\htmlclass{colB}\multicolumn{1}{|c|}{B会場（1階 211号室）}\\\hline\hline
+13:40〜14:20
+&
+\multicolumn{1}{|c||}{\sf 論文賞表彰式＋記念講演}
+&
+\\\hline\hline
+14:20〜14:30&\multicolumn{2}{|c|}{休憩}
+\\\hline\hline
+%&\htmlth\htmlclass{colA}\multicolumn{1}{|c||}{A会場（1階 212号室）}&\htmlth\htmlclass{colB}\multicolumn{1}{|c|}{B会場（1階 211号室）}\\\hline\hline
+&\multicolumn{1}{|c||}{\footnotesize\sf A-3「情報・知識と構造化（1）」（座長: 国沢隆）}
+&\multicolumn{1}{|c|}{\footnotesize\sf  B-3「データベース（1）」（座長: 田良島哲）}
+\\\hline
+14:30〜15:00
+&
+資源供給情報を利用した耐熱材料の選択指針
+
+\begin{authors}
+○芳須弘, 藤田充苗, 原田幸明
+
+（物質・材料研究機構）
+\end{authors}
+&
+著者名典拠情報を拡充するための共同編集プラットフォーム
+
+\begin{authors}
+ ○川島隆徳（東京工業大学大学院社会理工学研究科）, 研谷紀夫（東京大学大学院情報学環）
+\end{authors}
+\\\hline
+15:00〜15:30
+&
+学術俯瞰、特許俯瞰による商業化可能な技術要素の早期発見
+
+\begin{authors}
+ ○柴田尚樹, 梶川裕矢, 坂田一郎（東京大学
+
+ 大学院工学系研究科）
+\end{authors}
+&
+聖教書誌情報全文検索システムのスタンドアロン化の試み
+
+\begin{authors}
+ ○渡上将治, 村川猛彦（和歌山大学システム工学部）, 宇都宮啓吾（大阪大谷大学文学部）, 
+
+ 中川優（和歌山大学システム工学部）
+\end{authors}
+\\\hline
+15:30〜16:00
+&
+次世代電池における国際的共同研究の構造
+
+\begin{authors}
+ ○佐々木一, 梶川裕矢, 坂田一郎（東京大学
+
+ 大学院工学系研究科）
+\end{authors}
+&
+EUC/EUDを前提とした文学研究システムのモデル化に関する考察
+
+\begin{authors}
+ ○富澤浩樹（埼玉大学大学院文化科学研究科）
+\end{authors}
+\\\hline
+16:00〜16:15
+&\multicolumn{2}{|c|}{休憩}
+\\\hline
+&
+\multicolumn{1}{|c||}{\footnotesize\sf A-4「情報・知識と構造化（2）」（座長: 研谷紀夫）}
+&
+\multicolumn{1}{|c|}{\footnotesize\sf B-4「データベース（2）」（座長: 宇陀則彦）}
+\\\hline
+16:15〜16:45
+&
+カリキュラムの特徴抽出と時間割の要約生成
+
+\authorsep
+\begin{authors}
+○堀幸雄, 中山尭, 今井慈郎（香川大学）
+\end{authors}
+&
+MLAの記述規則に関する比較研究
+
+\begin{authors}
+ ○鈴木良徳, 八重樫純樹（静岡大学情報学部）
+\end{authors}
+\\\hline
+16:45〜17:15
+&
+社会的ニーズを踏まえた法律情報に対する知識構造マップの開発
+
+\begin{authors}
+ ○川島啓, 大竹裕之, Adam Lobel, 山田建智
+
+ （財団法人未来工学研究所）
+\end{authors}
+&
+祭りデータベースモデルの研究調査
+
+\begin{authors}
+ ○山野邉渓（筑波大学大学院図書館情報メディア研究科）, 八重樫純樹（静岡大学情報学部）
+\end{authors}
+\\\hline
+\end{tabular}
+
+%\vspace*{.2\baselineskip}
+%※プログラムは都合により、変更される場合があります。
+%学会サイト上に掲載される最新のプログラムをご参照ください。
+
+%\begin{flushright}
+%{\sf
+%最終更新: 2010年4月20日}
+%\end{flushright}
+\end{document}
+% Local Variables:
+% time-stamp-line-limit: 1000
+% time-stamp-start: "最終更新: "
+% time-stamp-end: "}"
+% time-stamp-format: "%:y年%:m月%:d日"
+% End:
